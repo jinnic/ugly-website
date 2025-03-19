@@ -1,0 +1,148 @@
+/* GENERAL STYLES */
+body {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    font-family: 'Comic Sans MS', cursive, fantasy;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 10px black;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 5px solid gold;
+    padding: 20px;
+}
+
+/* GRID MADNESS */
+.grid-madness {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 30px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border: 5px solid hotpink;
+    transition: transform 0.3s;
+}
+
+.grid-item img:hover {
+    transform: scale(1.1);
+}
+
+/* FLEXBOX */
+.flexbox-disaster {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: black;
+}
+
+.flex-backwards {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, violet);
+    padding: 20px;
+}
+
+.flex-item {
+    font-size: 1.8em;
+    padding: 15px;
+    background: radial-gradient(circle, red, orange, yellow, green, blue, violet);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.flex-item:hover {
+    transform: scale(1.2);
+}
+
+/* ABSOLUTE CHAOS */
+.absolute-hell {
+    position: relative;
+    height: 300px;
+    background: repeating-linear-gradient(-45deg, red, orange, yellow, green, blue, violet);
+}
+
+.absolute-item {
+    position: absolute;
+    font-size: 2em;
+    background: black;
+    color: cyan;
+    border: 3px solid white;
+    padding: 10px;
+    animation: floaty 3s infinite alternate;
+}
+
+.one { top: 10px; left: 10%; }
+.two { top: 60px; left: 70%; animation: rotate 5s infinite linear; }
+.three { bottom: 50px; left: 40%; animation: shake 0.2s infinite; }
+.four { bottom: 20px; left: 10%; }
+
+/* MARQUEE */
+.marquee {
+    font-size: 30px;
+    background: pink;
+    padding: 15px;
+    border: 3px dashed cyan;
+}
+
+/* MUSIC HOVER */
+.music-trigger {
+    cursor: pointer;
+    background: yellow;
+    color: red;
+    padding: 10px;
+    border: 3px dashed black;
+}
+
+/* KEYFRAMES */
+@keyframes floaty { 0% { transform: translateY(0px); } 100% { transform: translateY(-15px); } }
+@keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes shake { 0% { transform: translateX(0px); } 100% { transform: translateX(10px); } }
+
+/* FLASHY TEXT BOX */
+.flashy-box {
+    background-color: hotpink;
+    padding: 20px;
+    border: 10px dotted blue;
+    display: inline-block;
+    animation: bodyFlash 0.5s infinite alternate;
+}
+
+.flashy-box:hover {
+    background-color: yellow;
+    transform: rotate(10deg) scale(1.5);
+}
+
+/* FLASHY TEXT ANIMATION */
+.flashy-text {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px black;
+    animation: blink 0.7s infinite alternate;
+}
+
+/* BODY FLASH EFFECT */
+@keyframes bodyFlash {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+/* BLINKING TEXT */
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}

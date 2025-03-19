@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    font-family: 'Comic Sans MS', cursive, fantasy;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3em;
+    text-shadow: 5px 5px 40px white;
+    animation: rainbow-text 2s infinite alternate;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background: linear-gradient(to right, red, green, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline wavy yellow;
+    animation: bodyFlash 0.5s infinite alternate;
+    border: 8px groove gold;
+}
+
+/* GRID MADNESS */
+.grid-madness {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    background: url('https://www.publicdomainpictures.net/pictures/320000/velka/rainbow-background-1582522357XKz.jpg');
+    padding: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border: 5px solid hotpink;
+    transform: rotate(10deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img:hover {
+    transform: rotate(-10deg) scale(1.2);
+}
+
+/* FLEXBOX DISASTER */
+.flexbox-disaster {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+    background: black;
+    padding: 20px;
+}
+
+.flex-backwards {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    padding: 20px;
+}
+
+.flex-item {
+    font-size: 2em;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 5px dashed yellow;
+    background: radial-gradient(circle, red, orange, yellow, green, blue, indigo, violet);
+    box-shadow: 0px 0px 20px white;
+    transform: skew(15deg);
+    animation: bounce 1s infinite alternate;
+}
+
+/* ABSOLUTE POSITIONING HELL */
+.absolute-hell {
+    position: relative;
+    height: 300px;
+    background: repeating-linear-gradient(-45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    overflow: hidden;
+}
+
+.absolute-item {
+    position: absolute;
+    font-size: 2em;
+    padding: 10px;
+    background: black;
+    color: cyan;
+    border: 3px solid white;
+}
+
+.one {
+    top: 10px;
+    left: 20%;
+    animation: floaty 3s infinite alternate;
+}
+
+.two {
+    top: 50px;
+    left: 60%;
+    animation: rotate 4s infinite linear;
+}
+
+.three {
+    top: 150px;
+    left: 40%;
+    animation: shake 0.2s infinite alternate;
+}
+
+.four {
+    bottom: 50px;
+    right: 70%;
+    animation: bounce 0.2s infinite alternate;
+}
+
+.music-trigger {
+    font-size: 2em;
+    padding: 20px;
+    background: yellow;
+    color: red;
+    border: 5px dashed black;
+    animation: shake 0.3s infinite alternate;
+    cursor: pointer;
+}
+/* KEYFRAMES FOR ANIMATIONS */
+@keyframes rainbow-text {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: green; }
+    80% { color: blue; }
+    100% { color: violet; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes floaty {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(50px); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(5px); }
+}
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(10deg); }
+}
+
+/* Styling the "Thanks To" section */
+.thanks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.thanks-list li {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.5em;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.thanks-list li a {
+    text-decoration: none;
+    color: cyan;
+    font-weight: bold;
+}
+
+.thanks-list li:hover {
+    background: red;
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* MARQUEE MADNESS */
+.marquee {
+    font-size: 50px;
+    font-weight: 900;
+    color: black;
+    background: pink;
+    text-align: center;
+    padding: 20px;
+    border: 5px double cyan;
+    animation: bounce 0.5s infinite;
+}
+
+p {
+    /* font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    word-spacing: 20px;
+    background-color: lime;
+    padding: 10px;
+    border: 5px dashed pink;
+    box-shadow: 10px 10px 20px magenta;
+    transition: transform 0.9s; */
+}
+
+p.left:hover {
+    transform: rotate(15deg) scale(1.5);
+}
+p.right:hover {
+    transform: rotate(-15deg) scale(1.5);
+}
+
+.flashy-box{
+    background-color: hotpink;
+    padding: 20px;
+    border: 10px dotted blue;
+    display: inline-block;
+    animation: bodyFlash 0.5s infinite alternate;
+}
+.flashy-box:hover {
+    background-color: yellow;
+    transform: rotate(10deg) scale(3);
+}
+@keyframes bodyFlash {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+
+.flashy-text{
+    
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px black;
+    animation: blink 0.7s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}

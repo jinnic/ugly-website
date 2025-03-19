@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Nightmare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌈 Welcome to the Rainbow Nightmare! 🌈</h1>
+    </header>
+
+    <!-- GRID MADNESS SECTION -->
+    <section class="grid-madness">
+        <div class="grid-item"><img src="https://placecats.com/150/150" alt="Kitten"></div>
+        <div class="grid-item"><img src="https://placewaifu.com/image/150/150" alt="Bear"></div>
+        <div class="grid-item"><img src="https://placebear.com/150/151" alt="Kitten"></div>
+        <div class="grid-item"><img src="https://placebear.com/151/150" alt="Bear"></div>
+        <div class="grid-item"><img src="https://placecats.com/149/149" alt="Kitten"></div>
+        <div class="grid-item"><img src="https://placewaifu.com/image/152/152" alt="Bear"></div>
+    </section>
+
+    <!-- MARQUEE SECTION -->
+    <marquee class="marquee" behavior="alternate" direction="right" scrollamount="20">WELCOME TO RAINBOW RAINBOW</marquee>
+    <div class="flashy-box"><p class="flashy-text">🌈 This is a rainbow text! 🌈</p></div>
+    <marquee class="marquee" behavior="alternate" direction="left" scrollamount="20">WELCOME TO RAINBOW RAINBOW</marquee>
+    <!-- FLEXBOX DISASTER SECTION -->
+    <section class="flexbox-disaster">
+        <h2>Flexbox hell - wrap</h2>
+        <div class="flex-item">🔴 Flexibleeeeeeeee Red</div>
+        <div class="flex-item">🟠 Orange</div>
+        <div class="flex-item">🟡 Yellow</div>
+        <div class="flex-item">🟢 Green</div>
+        <div class="flex-item">🔵 Blue</div>
+        <div class="flex-item">🟣 Purple</div>
+        
+        <div class="flex-backwards">
+            <h2>Flexbox Backwards & no wrap</h2>
+            <div class="flex-item">🔴 Flexibleeeeeeeee Red</div>
+            <div class="flex-item">🟠 Orange</div>
+            <div class="flex-item">🟡 Yellow</div>
+            <div class="flex-item">🟢 Green</div>
+            <div class="flex-item">🔵 Blue</div>
+            <div class="flex-item">🟣 Purple</div>
+        </div>
+    </section>
+
+    <!-- ABSOLUTE POSITIONING HELL -->
+    <section class="absolute-hell">
+        <div class="absolute-item one">I'm floating! 🤪</div>
+        <div class="absolute-item two">Feeling dizzy? 🎭</div>
+        <div class="absolute-item three music-trigger">🎶 Hover for Music 🎶</div>
+        <div class="absolute-item four">🌈🔥</div>
+        <audio id="chaos-audio" src="https://www.myinstants.com/media/sounds/mario-coin.mp3"></audio>
+
+    </section>
+
+    <footer>
+        <p class="left">🌈 Created with Too Many CSS Properties 🌈</p>
+        <p class="right"><strong>Thanks to the following sources for the images:</strong></p>
+        <ul class="thanks-list">
+            <li><a href="https://www.publicdomainpictures.net/" target="_blank">Public Domain Pictures</a></li>
+            <li><a href="https://www.placecats.com/" target="_blank">Place Cats</a></li>
+            <li><a href="https://placebear.com/" target="_blank">Place Bear</a></li>
+            <li><a href="https://placewaifu.com/" target="_blank">Place Waifu</a></li>
+        </ul>    
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const musicTrigger = document.querySelector(".music-trigger");
+            const audio = document.getElementById("chaos-audio");
+        
+            musicTrigger.addEventListener("mouseover", function () {
+                audio.currentTime = 0; // Restart audio every hover
+                audio.play();
+            });
+        
+            musicTrigger.addEventListener("mouseleave", function () {
+                audio.pause();
+            });
+        });
+        </script>
+</body>
+</html>
